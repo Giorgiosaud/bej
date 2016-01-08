@@ -1,0 +1,17 @@
+body{
+	display:flex;
+	flex-direction:column;
+	*{
+		font-family:$font-family-base
+	}
+}
+.contenedor {
+	padding-top: 80px;
+}
+
+@media(min-width: 760px) {
+  .contenedor {
+	padding-top: 36px;
+  }
+
+}

@@ -1,0 +1,83 @@
+.Menu {
+    background-color: #7aa34c;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top:0;
+}
+.Menu__container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    float: left;
+    margin: auto;
+}
+
+.Menu__elements{
+    display: none;
+    flex-direction: column;
+    flex: 3;
+    justify-content: space-around;
+    align-items: center;
+    color: rgba(255,255,255,0.75);
+    font-size:2em;
+}
+.Menu__element a {
+    text-decoration: none;
+    color: inherit;
+    &:hover{
+    color:darken(rgba(255,255,255,0.75),10);
+    }
+}
+
+.Menu__logo {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Menu__toogler {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+@media(min-width: 760px) {
+    .Menu__container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 90%;
+        float: left;
+        margin: auto;
+    }
+
+    .Menu__elements{
+        display: flex;
+        flex: 3;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        color: rgba(255,255,255,0.75);
+        font-size:1em;
+    }
+    .Menu__element a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .Menu__logo {
+        display: flex;
+        flex: 1;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .Menu__toogler {
+        display: none;
+    }
+
+}

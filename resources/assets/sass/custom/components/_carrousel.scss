@@ -1,0 +1,58 @@
+
+.Carousel {
+    display: block;
+    width: 100%;
+}
+
+.Carousel__inner {
+    display: block;
+    width: 100%;
+}
+
+.Carousel__image img{
+    display: block;
+    width: 100%;
+    height:auto;
+}
+
+.Carousel__caption {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #FFF;
+    flex-direction: column;
+    padding: 0 10%;
+    font-size: 0.9rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.Carousel__image {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.Carousel__caption {}
+
+.Carousel__owner {
+    align-self: flex-end;
+    justify-content: center;
+    display: flex;
+}
+
+.Carousel__description {
+    min-height: 4em;
+    display: flex;
+    flex-direction: column;
+}
+@media(min-width: 760px) {
+
+    .Carousel__caption {
+        font-size: 1.5rem;
+    }
+
+}

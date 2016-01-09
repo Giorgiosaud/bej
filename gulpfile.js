@@ -18,6 +18,8 @@ elixir.config.publicPath='compiled';
 		.copy('vendor/bower_components/jquery/dist/jquery.min.js','resources/assets/js/jquery/')
 		.copy('vendor/bower_components/lazyloadxt/dist/jquery.lazyloadxt.extra.js','resources/assets/js/lazyloadxt/')
 		.copy('vendor/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js','resources/assets/js/bootstrap/')
+		.copy('vendor/bower_components/scrollmagic/scrollmagic/minified','resources/assets/js/scrollmagic/')
+		.copy('vendor/bower_components/gsap/src/minified/','resources/assets/js/greensock/')
 
 		.sass('sass.scss', 'resources/css',
  	{
@@ -32,9 +34,16 @@ elixir.config.publicPath='compiled';
  		'sass.css'
  		],null,'resources/css')
  	 .scripts([
+			'greensock/easing/EasePack.min.js',
+			'greensock/TweenMax.min.js',
+			'greensock/TimelineMax.min.js',
 			'jquery/jquery.min.js',
 			'bootstrap/bootstrap.min.js',
 			'lazyloadxt/jquery.lazyloadxt.extra.js',
+			'scrollmagic/ScrollMagic.min.js',
+			'scrollmagic/plugins/debug.addIndicators.min.js',
+			'scrollmagic/plugins/animation.gsap.min.js',
+			'scrollmagic/plugins/animation.velocity.min.js',
 	 	 	'main.js'
  	 	],null,'resources/assets/js')
 		.browserSync({

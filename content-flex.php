@@ -7,13 +7,14 @@
  * @since Twenty Fifteen 1.0
  */
 // check if the flexible content field has rows of data
+echo wp_get_attachment_image(get_field('imagenmovil'),'full',false,['class'=>"imagenmovil"]);
 if( have_rows('flexible') ):
 	     // loop through the rows of data
 	while ( have_rows('flexible') ) : 
 		the_row();
 	?>
-	<div <?php if(get_sub_field('color')){?> style="background-color: <?php the_sub_field('color'); ?>" <?php } ?> >
 		<?php
+
 		if( get_row_layout() == 'slider' ):
 			show_slider();
 		elseif( get_row_layout() == 'section' ): 
@@ -31,7 +32,6 @@ if( have_rows('flexible') ):
 		elseif( get_row_layout() == 'html' ):
 			show_html();
 		endif;?>
-	</div>
 	<?php
 	endwhile;
 

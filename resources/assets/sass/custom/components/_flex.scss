@@ -47,6 +47,7 @@
 .Flex__title {
   margin: 0 0 1.5em;
   font-size: 1.5em;
+  position: relative;
 }
 .Flex__content--Margin--left50 {
   margin-left: 50%;
@@ -86,7 +87,12 @@
 .Flex--no-margin-top{
   margin-top: auto;
 }
-
+.Flex__imageContainer--vertical{
+  overflow: hidden;
+  position: relative;
+  margin:0 2em;
+  justify-content: flex-start;
+}
 @media(min-width: 760px) {
   .Flex__image{
     width: 100%;

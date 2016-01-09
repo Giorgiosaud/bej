@@ -9,9 +9,15 @@ body{
 	padding-top: 80px;
 }
 
+.imagenmovil{
+  position: absolute;
+  display: none;
+}
 @media(min-width: 760px) {
   .contenedor {
 	padding-top: 36px;
   }
-
+  .imagenmovil{
+	display:block;
+  }
 }

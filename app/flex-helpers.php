@@ -73,7 +73,7 @@ if(!function_exists('show_parrafo_2_textos_1_imagen')){
             $textRight.='Flex--40';
         };
     ?>
-    <div class="Flex Flex--column">
+    <div class="Flex Flex--column" id="<?= get_sub_field('id'); ?>">
         <?php
         if( get_sub_field('titulo')):
         ?>
@@ -99,7 +99,7 @@ if(!function_exists('show_parrafo_2_textos_1_imagen')){
 if(!function_exists('show_1_imagen_centrada')){
     function show_1_imagen_centrada(){
         ?>
-        <div class="Flex Flex--column">
+        <div class="Flex Flex--column" id="<?= get_sub_field('id')?>">
             <div class="Flex Flex__imageContainer">
                 <?= wp_get_attachment_image(get_sub_field('imagen'),'full',false,['class'=>"Flex__image"])?>
             </div>
@@ -110,7 +110,7 @@ if(!function_exists('show_1_imagen_centrada')){
 if(!function_exists('show_parrafo_2_textos')){
     function show_parrafo_2_textos(){
         ?>
-        <div class="Flex Flex--column">
+        <div class="Flex Flex--column" id="<?= get_sub_field('id')?>" >
             <?php
             if( get_sub_field('titulo')):
                 ?>
@@ -135,7 +135,7 @@ if(!function_exists('show_parrafo_2_textos')){
 if(!function_exists('show_parrafo_3_textos_1_imagen_alineados')){
     function show_parrafo_3_textos_1_imagen_alineados(){
         ?>
-        <div class="Flex Flex--column">
+        <div class="Flex Flex--column" id="<?= get_sub_field('id')?>">
             <?php
             if( get_sub_field('titulo')):
                 ?>
@@ -173,7 +173,7 @@ if(!function_exists('show_parrafo_3_textos_1_imagen_alineados')){
 if(!function_exists('show_parrafo_1_texto_centrado')){
     function show_parrafo_1_texto_centrado(){
         ?>
-        <div class="Flex Flex--column">
+        <div class="Flex Flex--column" id="<?= get_sub_field('id')?>">
             <div class="Flex__title"><?= get_sub_field('titulo')?></div>
             <div class="Flex Flex--30 Flex__container">
                         <?= get_sub_field('descripcion')?>

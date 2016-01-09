@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 </head><!-- /header -->
 <body <?php body_class(); ?>>
-<?php get_template_part( 'Menu', 'top' );?>
+<?php get_template_part( 'Menu', 'top' );
+get_template_part( 'Contacts', 'main' );?>
 <div class="contenedor">
 

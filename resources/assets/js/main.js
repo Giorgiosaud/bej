@@ -106,7 +106,7 @@ $(window).on("load", function() {
     var imagenInicial=$('#PrimerPaso').eq(0),
         imagenMovilWidth=$('.imagenmovil').width(),
         centroLeft=$(window).width()/2,
-        imagenInicialTopPosition=imagenInicial.offset().top,
+        imagenInicialTopPosition=imagenInicial.offset().top+imagenMovilWidth,
         imagenInicialLeftPosition=centroLeft-imagenMovilWidth;
 
 

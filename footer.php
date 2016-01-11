@@ -15,5 +15,8 @@
 <div class="footer-band"></div>
 <?php wp_footer(); ?>
 </div>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAVEC8MNGaMrBDUEpdO_KJirXnNv3OkeY&callback=initMap">
+</script>
 </body>
 </html>

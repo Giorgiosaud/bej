@@ -14,6 +14,17 @@ jQuery.fn.toggleFlexbox = function() {
         return;
     }
 };
+jQuery.fn.toggleLeft = function() {
+    var elm = $(this[0]);
+    console.log(elm);
+    if(elm.css('left') != "0px"){
+        elm.animate({left:0},1500);
+        return;
+    }else{
+        elm.animate({left:'100%'},1500);
+        return;
+    }
+};
 jQuery.fn.flexboxDown = function() {
     var elm = $(this[0]);
         elm.css('display', '-webkit-flex');
@@ -37,6 +48,17 @@ jQuery(window).resize(function(){
     }
     });
 jQuery(document).ready(function($) {
+    $('#formulairoDeContacto').submit(function(e){
+        e.preventDefault();
+        var esto = $(this);
+        $.post( myAjax.ajax_url,
+            esto.serialize()+'&action=enviar_correo',
+            function(data){
+                $('.Contactos').toggleLeft();
+                $('.alertBox').fadeIn().delay('2000').fadeOut();
+                esto[0].reset();
+            },"text");
+    });
     $windowWidth = $(window).width();
     $('#Menu__collapse').click(function(event) {
         $('.menu-item').slideToggle('slow');
@@ -60,6 +82,14 @@ jQuery(document).ready(function($) {
 
 //    Effects
     $('.Menu__element a').click(function(){
+        //alert($.attr(this, 'href'));
+        if($.attr(this, 'href')=='#Contactanos'){
+            $('.Contactos').toggleLeft();
+            if($windowWidth<760){
+                $('.Menu__elements').flexboxUp();
+            }
+            return true;
+        }
         $('html, body').animate({
             scrollTop: $( $.attr(this, 'href') ).offset().top-100
         }, 1500);
@@ -136,3 +166,10 @@ $(window).on("load", function() {
         .addTo(controller);
 
 });
+
+var initMap=function(){
+    var map= new google.maps.Map(document.getElementById('map'),{
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 6
+    });
+}

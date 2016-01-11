@@ -5,4 +5,58 @@
   width: 100%;
   z-index: 99;
   left: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+}
+div#map {
+  width: 80%;
+  flex: 1;
+}
+.formulario{
+  width: 80%;
+  flex: 1;
+}
+.formTitle {
+  align-self: center;
+  text-align: center;
+  padding: 1em 0;
+  color: white;
+}
+.formTitle{
+
+}
+button, input, textarea{
+  background-color:#FFF;
+  color:black;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #000;
+  opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #000;
+  opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #000;
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color:    #000;
+}
+.alertBox{
+  display: none;
+  position: fixed;
+  z-index: 101;
+  right: 20px;
+  bottom: 20px;
+  border-radius:5px;
+  padding: 1em;
+  background-color: deepskyblue;
+
 }

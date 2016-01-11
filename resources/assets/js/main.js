@@ -103,10 +103,11 @@ jQuery(document).ready(function($) {
 });
 $(window).on("load", function() {
     // Position initial imagenmovil
-    var imagenInicial=$('.Flex.Flex__imageContainer').eq(0),
-        imagenHorizontal=$('.Flex__imageContainer--vertical'),
-        imagenInicialTopPosition=imagenInicial.offset().top+imagenInicial.height()*0.75,
-        imagenInicialLeftPosition=imagenHorizontal.offset().left+(imagenHorizontal.width()/1.9);
+    var imagenInicial=$('#PrimerPaso').eq(0),
+        imagenMovilWidth=$('.imagenmovil').width(),
+        centroLeft=$(window).width()/2,
+        imagenInicialTopPosition=imagenInicial.offset().top,
+        imagenInicialLeftPosition=centroLeft-imagenMovilWidth;
 
 
     $('.imagenmovil').css({'left':imagenInicialLeftPosition,'top':imagenInicialTopPosition});
@@ -136,8 +137,7 @@ $(window).on("load", function() {
     var secondAnimation= new TimelineMax(),
         duration=$('#Nosotros').height();
     objetive=$('.Flex__imageContainer img').eq(1);
-    secondAnimation.insert(TweenMax.from(objetive,1,{opacity:0}))
-        .insert(TweenMax.from('.imagenmovil',1,{opacity:0}));
+    secondAnimation.insert(TweenMax.from(objetive,1,{opacity:0}));
     var scene2= new ScrollMagic.Scene({triggerElement: "#Nosotros", duration: duration})
         .setTween(secondAnimation)
         //.addIndicators({indent:2})
@@ -157,11 +157,13 @@ $(window).on("load", function() {
         .addTo(controller);
     //
     ////
-    var permanentAnimation= new TimelineMax(),
-        imagenFinalLeftPosition=imagenInicialLeftPosition*2/2.5;
-    permanentAnimation.insert(TweenMax.to('.imagenmovil',1,{top:lastAnimationImageBottomPosition,left:imagenFinalLeftPosition,rotation: 360}));
-    var permanentScene= new ScrollMagic.Scene({triggerElement: "#Nosotros", duration: animationHeight})
+    var permanentAnimation= new TimelineMax()
+        //imagenFinalLeftPosition=imagenInicialLeftPosition*2/2.5;
+    permanentAnimation.insert(TweenMax.to('.imagenmovil',1,{rotation: 540}));
+    var permanentScene= new ScrollMagic.Scene({triggerElement: "#PrimerPaso", duration: animationHeight})
+        .setPin('.imagenmovil')
         .setTween(permanentAnimation)
+
         //.addIndicators({name: "Permanent",indent:1})
         .addTo(controller);
 

@@ -25,6 +25,11 @@ jQuery.fn.toggleLeft = function() {
         return;
     }
 };
+jQuery.fn.hideToRight = function() {
+    var elm = $(this[0]);
+        elm.animate({left:'100%'},1500);
+        return;
+};
 jQuery.fn.flexboxDown = function() {
     var elm = $(this[0]);
         elm.css('display', '-webkit-flex');
@@ -82,6 +87,7 @@ jQuery(document).ready(function($) {
 
 //    Effects
     $('.Menu__element a').click(function(){
+
         //alert($.attr(this, 'href'));
         if($.attr(this, 'href')=='#Contactanos'){
             $('.Contactos').toggleLeft();
@@ -89,6 +95,9 @@ jQuery(document).ready(function($) {
                 $('.Menu__elements').flexboxUp();
             }
             return true;
+        }
+        else{
+            $('.Contactos').hideToRight();
         }
         $('html, body').animate({
             scrollTop: $( $.attr(this, 'href') ).offset().top-100

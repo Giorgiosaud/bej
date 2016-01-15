@@ -63,7 +63,7 @@ jQuery(document).ready(function($) {
                 alert(data);
                 $('.alertBox').fadeIn().delay('2000').fadeOut();
                 esto[0].reset();
-            },"text");
+            },"json");
     });
     $windowWidth = $(window).width();
     $('#Menu__collapse').click(function(event) {

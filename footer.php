@@ -12,9 +12,11 @@
 <footer>
 <?php the_field('footer-text', 'option'); ?>
 </footer>
-<div class="footer-band"></div>
-<?php wp_footer(); ?>
 </div>
+<div class="footer-band">
+        <?php the_field('footer-text', 'option')?>
+</div>
+<?php wp_footer(); ?>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAVEC8MNGaMrBDUEpdO_KJirXnNv3OkeY&callback=initMap">
 </script>

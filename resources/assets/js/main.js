@@ -60,6 +60,7 @@ jQuery(document).ready(function($) {
             esto.serialize()+'&action=enviar_correo',
             function(data){
                 $('.Contactos').toggleLeft();
+                alert(data);
                 $('.alertBox').fadeIn().delay('2000').fadeOut();
                 esto[0].reset();
             },"text");
@@ -68,18 +69,6 @@ jQuery(document).ready(function($) {
     $('#Menu__collapse').click(function(event) {
         $('.menu-item').slideToggle('slow');
         $('.menu-item').css({'display':'flex'})
-    });
-    $('#submitContactForm').submit(function(event) {
-        event.preventDefault();
-        var that=$(this);
-        $.post(myAjax.ajaxurl,
-            that.serialize(),
-            function(result){
-                console.log(result);
-                alert(result);
-            }
-        );
-        console.log('Enviado');
     });
     $('.Menu__toogler').click(function(){
         $('.Menu__elements').toggleFlexbox();

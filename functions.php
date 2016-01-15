@@ -162,6 +162,7 @@ show_admin_bar( false );
 // wp_localize_script( 'mi-script-ajax', 'MyAjax', array( 'url' => admin_url( 'admin-ajax.php' ) ) );
 //Para manejar admin-ajax tenemos que añadir estas dos acciones.
 //IMPORTANTE!! Para que funcione reemplazar "enviar_correo" por vuestra action definida en ajax-search.js
+
 add_action('wp_ajax_enviar_correo', 'enviar_correo_callback');
 add_action('wp_ajax_nopriv_enviar_correo', 'enviar_correo_callback');
 function enviar_correo_callback() {

@@ -56,11 +56,12 @@ jQuery(document).ready(function($) {
     $('#formulairoDeContacto').submit(function(e){
         e.preventDefault();
         var esto = $(this);
-        $.post( myAjax.ajax_url,
+        $.post( myAjax.ajaxurl,
             esto.serialize()+'&action=enviar_correo',
             function(data){
                 $('.Contactos').toggleLeft();
-                alert(data);
+                //window.mail=data;
+                //alert(data.mail);
                 $('.alertBox').fadeIn().delay('2000').fadeOut();
                 esto[0].reset();
             },"json");

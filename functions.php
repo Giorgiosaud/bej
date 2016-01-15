@@ -165,7 +165,7 @@ show_admin_bar( false );
 add_action('wp_ajax_enviar_correo', 'enviar_correo_callback');
 add_action('wp_ajax_nopriv_enviar_correo', 'enviar_correo_callback');
 function enviar_correo_callback() {
-	$mailTo=get_theme_mod( 'bigboca_mail_to', 'jorgelsaud@gmail.com' );
+	$mailTo=get_field('emailTo', 'option');
 	$headers='From: Global Bej Web Page <info@globalbej.com>' . "\r\n";
 	$body='Te ha Contactado '.$_POST['nombre'].' cuyo correo es '.$_POST['email'].' y te contacto para lo siguiente: ';
 	$body .= $_POST['mensaje'];

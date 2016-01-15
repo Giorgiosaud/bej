@@ -14,7 +14,7 @@
 		<div class="Menu__elements">
 			<div class="Menu__element"><a href="#PrimerPaso">Primer Paso</a></div>
 			<div class="Menu__element"><a href="#Nosotros">Nosotros</a></div>
-			<div class="Menu__element"><a href="#Inversion">Inversion</a></div>
+			<div class="Menu__element"><a href="#Inversion">Inversión</a></div>
 			<div class="Menu__element"><a href="#MatrizEstrategica">Matriz Estrategica</a></div>
 			<div class="Menu__element"><a href="#Contactanos">Contáctanos</a></div>
 		</div>

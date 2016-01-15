@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
             that.serialize(),
             function(result){
                 console.log(result);
-                alert('your message was sent');
+                alert(result);
             }
         );
         console.log('Enviado');

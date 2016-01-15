@@ -173,8 +173,7 @@ function enviar_correo_callback() {
 	wp_mail( $mailTo, $subj, $body,$headers );
 	$subj = 'Contact Us Web (copied)';
 	wp_mail( $_POST['email'], $subj, $body,$headers );
-
-	echo json_encode(['mail'=>$mailTo]);
+	wp_send_json(['mail'=>$mailTo]);
 
 	die(); // Siempre hay que terminar con die
 }

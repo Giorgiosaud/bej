@@ -125,22 +125,23 @@ $(window).on("load", function() {
         cochinoContenedor=$('.Flex__imageContainer').eq(0),
         heightCochino=$('.Flex .Flex__imageContainer img').eq(0).height(),
         startHeight=($windowWidth<760)?heightCochino-40:1;
-
+    objetive2=$('.Flex__imageContainer img').eq(1);
     firstAnimation.insert(TweenMax.fromTo(cochinoContenedor,3,{height:startHeight,opacity:0},{height:heightCochino,opacity:1}))
-        .insert(TweenMax.from(elementTextRight,3,{'margin-top':0}));
+        .insert(TweenMax.from(elementTextRight,3,{'margin-top':0}))
+        .add(TweenMax.from(objetive2,1,{opacity:0}));
     var scene1= new ScrollMagic.Scene({triggerElement: "#PrimerPaso", duration: heightCochino})
         .setTween(firstAnimation)
         //.addIndicators()
         .addTo(controller);
 
-    var secondAnimation= new TimelineMax(),
-        duration=$('#Nosotros').height();
-    objetive=$('.Flex__imageContainer img').eq(1);
-    secondAnimation.insert(TweenMax.from(objetive,1,{opacity:0}));
-    var scene2= new ScrollMagic.Scene({triggerElement: "#Nosotros", duration: heightCochino})
-        .setTween(secondAnimation)
-        //.addIndicators({indent:2})
-        .addTo(controller);
+    //var secondAnimation= new TimelineMax(),
+    //    duration=$('#Nosotros').height();
+    //objetive=$('.Flex__imageContainer img').eq(1);
+    //secondAnimation.insert(TweenMax.from(objetive,1,{opacity:0}));
+    //var scene2= new ScrollMagic.Scene({triggerElement: "#Nosotros", duration: heightCochino})
+    //    .setTween(secondAnimation)
+    ////    .addIndicators({indent:2})
+    //    .addTo(controller);
     //
     //
     var thirdAnimation= new TimelineMax(),
@@ -152,7 +153,7 @@ $(window).on("load", function() {
     //thirdAnimation.insert(TweenMax.from('.imagenmovil',1,{opacity:0}));
     var scene3= new ScrollMagic.Scene({triggerElement: "#Nosotros2", duration: duration})
         .setTween(thirdAnimation)
-        //.addIndicators()
+        ////.addIndicators()
         .addTo(controller);
     //
     ////
@@ -163,7 +164,7 @@ $(window).on("load", function() {
         .setPin('.imagenmovil')
         .setTween(permanentAnimation)
 
-        //.addIndicators({name: "Permanent",indent:1})
+        // .addIndicators({name: "Permanent",indent:1})
         .addTo(controller);
 
 });

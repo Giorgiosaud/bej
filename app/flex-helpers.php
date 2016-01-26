@@ -82,13 +82,13 @@ if(!function_exists('show_parrafo_2_textos_1_imagen')){
         endif;
         ?>
         <div class="Flex Flex__container <?= get_sub_field('row_or_column')?>">
-            <div class="Flex Flex--1 Flex--start Flex--no-margin-bottom <?= $textLeft ?>">
+            <div class="Flex Flex--1 Flex--start <?= $textLeft ?>">
                 <?= get_sub_field('texto_izquierdo');?>
             </div>
             <div class="Flex <?=$imagecontainer?>">
                 <?= wp_get_attachment_image(get_sub_field('imagen'),'full',false,['class'=>$imagen])?>
             </div>
-            <div class="Flex Flex--1 Flex--end Flex--no-margin-top <?= $textLeft ?>">
+            <div class="Flex Flex--1 Flex--end <?= $textLeft ?>">
                 <?= get_sub_field('texto_derecho');?>
             </div>
         </div>

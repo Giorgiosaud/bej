@@ -510,7 +510,7 @@ $(window).on("load", function() {
         imagenMovilWidth=$('.imagenmovil').width(),
         centroLeft=$(window).width()/2,
         imagenInicialTopPosition=imagenInicial.offset().top+imagenMovilWidth,
-        imagenInicialLeftPosition=centroLeft-imagenMovilWidth;
+        imagenInicialLeftPosition=centroLeft-(imagenMovilWidth/2);
 
 
     $('.imagenmovil').css({'left':imagenInicialLeftPosition,'top':imagenInicialTopPosition});
@@ -541,7 +541,7 @@ $(window).on("load", function() {
         duration=$('#Nosotros').height();
     objetive=$('.Flex__imageContainer img').eq(1);
     secondAnimation.insert(TweenMax.from(objetive,1,{opacity:0}));
-    var scene2= new ScrollMagic.Scene({triggerElement: "#Nosotros", duration: duration})
+    var scene2= new ScrollMagic.Scene({triggerElement: "#PrimerPaso", duration: duration})
         .setTween(secondAnimation)
         //.addIndicators({indent:2})
         .addTo(controller);

@@ -134,10 +134,10 @@ $(window).on("load", function() {
         .addTo(controller);
 
     var secondAnimation= new TimelineMax(),
-        
+        duration=$('#Nosotros').height();
     objetive=$('.Flex__imageContainer img').eq(1);
     secondAnimation.insert(TweenMax.from(objetive,1,{opacity:0}));
-    var scene2= new ScrollMagic.Scene({triggerElement: "#PrimerPaso", duration: heightCochino})
+    var scene2= new ScrollMagic.Scene({triggerElement: "#Nosotros", duration: heightCochino})
         .setTween(secondAnimation)
         //.addIndicators({indent:2})
         .addTo(controller);

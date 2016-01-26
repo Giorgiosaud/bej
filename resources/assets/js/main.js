@@ -134,17 +134,17 @@ $(window).on("load", function() {
         .addTo(controller);
 
     var secondAnimation= new TimelineMax(),
-        duration=$('#Nosotros').height();
+        
     objetive=$('.Flex__imageContainer img').eq(1);
     secondAnimation.insert(TweenMax.from(objetive,1,{opacity:0}));
-    var scene2= new ScrollMagic.Scene({triggerElement: "#PrimerPaso", duration: duration})
+    var scene2= new ScrollMagic.Scene({triggerElement: "#PrimerPaso", duration: heightCochino})
         .setTween(secondAnimation)
         //.addIndicators({indent:2})
         .addTo(controller);
     //
     //
     var thirdAnimation= new TimelineMax(),
-        duration=$('#Nosotros').height(),
+        duration=$('#Nosotros2').height()-300,
         objetivo=$('.Flex__imageContainer--vertical'),
         maxWidth=$('.Flex__imageContainer--vertical img').width();
     console.log(maxWidth);

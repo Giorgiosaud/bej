@@ -144,7 +144,7 @@ $(window).on("load", function() {
     //
     //
     var thirdAnimation= new TimelineMax(),
-        duration=$('#Nosotros2').height()-300,
+        duration=$('#Nosotros').height(),
         objetivo=$('.Flex__imageContainer--vertical'),
         maxWidth=$('.Flex__imageContainer--vertical img').width();
     console.log(maxWidth);

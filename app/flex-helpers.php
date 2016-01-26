@@ -145,7 +145,7 @@ if(!function_exists('show_parrafo_3_textos_1_imagen_alineados')){
             ?>
             <div class="Flex Flex__container <?= get_sub_field('row_or_column')?>">
                 <div class="Flex Flex--column Flex--1">
-                    <div class="Flex Flex--row Flex--Titulo2">
+                    <div class="Flex__title">
                         <?= get_sub_field('titulo_izquierdo')?>
                     </div>
                     <div class="Flex--row">
@@ -156,7 +156,7 @@ if(!function_exists('show_parrafo_3_textos_1_imagen_alineados')){
                     <?= wp_get_attachment_image(get_sub_field('imagen'),'full',false,['class'=>"Flex__image"])?>
                 </div>
                 <div class="Flex Flex--column Flex--1">
-                    <div class="Flex Flex--row Flex--Titulo2">
+                    <div class="Flex__title">
                         <?= get_sub_field('titulo_derecho')?>
                     </div>
                     <div class="Flex--row">

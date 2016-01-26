@@ -175,7 +175,7 @@ if(!function_exists('show_parrafo_1_texto_centrado')){
         ?>
         <div class="Flex Flex--column--no-margin" id="<?= get_sub_field('id')?>">
             <div class="Flex__title"><?= get_sub_field('titulo')?></div>
-            <div class="Flex Flex--30 Flex__container">
+            <div class="Flex Flex--30 Flex__container Flex--column--no-margin">
                         <?= get_sub_field('descripcion')?>
             </div>
         </div>

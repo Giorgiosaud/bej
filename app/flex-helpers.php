@@ -135,7 +135,7 @@ if(!function_exists('show_parrafo_2_textos')){
 if(!function_exists('show_parrafo_3_textos_1_imagen_alineados')){
     function show_parrafo_3_textos_1_imagen_alineados(){
         ?>
-        <div class="Flex Flex--column" id="<?= get_sub_field('id')?>">
+        <div class="Flex Flex--column--no-margin--bottom" id="<?= get_sub_field('id')?>">
             <?php
             if( get_sub_field('titulo')):
                 ?>
@@ -173,9 +173,9 @@ if(!function_exists('show_parrafo_3_textos_1_imagen_alineados')){
 if(!function_exists('show_parrafo_1_texto_centrado')){
     function show_parrafo_1_texto_centrado(){
         ?>
-        <div class="Flex Flex--column" id="<?= get_sub_field('id')?>">
+        <div class="Flex Flex--column--no-margin" id="<?= get_sub_field('id')?>">
             <div class="Flex__title"><?= get_sub_field('titulo')?></div>
-            <div class="Flex Flex--30 Flex__container Flex--column">
+            <div class="Flex Flex--30 Flex__container">
                         <?= get_sub_field('descripcion')?>
             </div>
         </div>

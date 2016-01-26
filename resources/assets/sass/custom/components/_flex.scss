@@ -25,6 +25,14 @@
   flex-direction:column;
   margin: 2em 0;
 }
+.Flex--column--no-margin{
+  flex-direction:column;
+  margin: 0;
+}
+.Flex--column--no-margin--bottom{
+  flex-direction:column;
+  margin-top: 2em;
+}
 .Flex--40{
   width: 100%;
 }
@@ -143,7 +151,7 @@
     align-self: flex-end;
   }
   .Flex__title {
-    margin: 0 0 1.5em;
+    margin: 0;
     font-size: 1.5em;
   }
   .Flex__content--Margin--left50 {

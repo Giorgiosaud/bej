@@ -134,7 +134,7 @@ $(window).on("load", function () {
         .add(TweenMax.from(objetive2, 1, {opacity: 0}));
     var scene1 = new ScrollMagic.Scene({triggerElement: "#PrimerPaso", duration: heightCochino})
         .setTween(firstAnimation)
-        //.addIndicators()
+        .addIndicators()
         .addTo(controller);
 
     //var secondAnimation= new TimelineMax(),
@@ -143,7 +143,7 @@ $(window).on("load", function () {
     //secondAnimation.insert(TweenMax.from(objetive,1,{opacity:0}));
     //var scene2= new ScrollMagic.Scene({triggerElement: "#Nosotros", duration: heightCochino})
     //    .setTween(secondAnimation)
-    ////    .addIndicators({indent:2})
+        .addIndicators({indent:2})
     //    .addTo(controller);
     //
     //
@@ -156,10 +156,8 @@ $(window).on("load", function () {
     //thirdAnimation.insert(TweenMax.from('.imagenmovil',1,{opacity:0}));
     var scene3 = new ScrollMagic.Scene({triggerElement: "#Nosotros2", duration: duration})
         .setTween(thirdAnimation)
-        ////.addIndicators()
+        .addIndicators()
         .addTo(controller);
-    //
-    ////
     var permanentAnimation = new TimelineMax()
     //imagenFinalLeftPosition=imagenInicialLeftPosition*2/2.5;
     permanentAnimation.insert(TweenMax.to('.imagenmovil', 1, {rotation: 540}));
@@ -167,7 +165,7 @@ $(window).on("load", function () {
         .setPin('.imagenmovil')
         .setTween(permanentAnimation)
 
-        // .addIndicators({name: "Permanent",indent:1})
+         .addIndicators({name: "Permanent",indent:1})
         .addTo(controller);
 
 });

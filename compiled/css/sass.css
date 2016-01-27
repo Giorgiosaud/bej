@@ -2455,6 +2455,12 @@ body {
   body * {
     font-family: "Exo", sans-serif; }
 
+* {
+  box-sizing: border-box; }
+
+.clearfix {
+  clear: both; }
+
 .contenedor {
   padding-top: 80px; }
 

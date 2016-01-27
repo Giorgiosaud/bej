@@ -21,7 +21,7 @@ elixir.config.publicPath='compiled';
 		.copy('vendor/bower_components/scrollmagic/scrollmagic/minified','resources/assets/js/scrollmagic/')
 		.copy('vendor/bower_components/gsap/src/minified/','resources/assets/js/greensock/')
 
-		.sass('sass.scss', 'resources/css',
+		.sass('sass.scss', 'compiled/css',
  	{
  		includePaths:[
 	 		__dirname + '/vendor/bower_components',
@@ -32,7 +32,7 @@ elixir.config.publicPath='compiled';
  	.styles(
  		[
  		'sass.css'
- 		],null,'resources/css')
+ 		],null,'compiled/css')
  	 .scripts([
 			'greensock/easing/EasePack.min.js',
 			'greensock/TweenMax.min.js',

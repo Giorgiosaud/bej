@@ -53,6 +53,8 @@ jQuery(window).resize(function () {
     }
 });
 jQuery(document).ready(function ($) {
+    
+
     $('#formulairoDeContacto').submit(function (e) {
         e.preventDefault();
         var esto = $(this);
@@ -102,6 +104,7 @@ jQuery(document).ready(function ($) {
 });
 $(window).on("load", function () {
     // Position initial imagenmovil
+
     var imagenInicial = $('#PrimerPaso').eq(0),
         imagenMovilWidth = $('.imagenmovil').width(),
         centroLeft = $(window).width() / 2,
@@ -134,7 +137,7 @@ $(window).on("load", function () {
         .add(TweenMax.from(objetive2, 1, {opacity: 0}));
     var scene1 = new ScrollMagic.Scene({triggerElement: "#PrimerPaso", duration: heightCochino})
         .setTween(firstAnimation)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
     //var secondAnimation= new TimelineMax(),
@@ -143,7 +146,7 @@ $(window).on("load", function () {
     //secondAnimation.insert(TweenMax.from(objetive,1,{opacity:0}));
     //var scene2= new ScrollMagic.Scene({triggerElement: "#Nosotros", duration: heightCochino})
     //    .setTween(secondAnimation)
-        .addIndicators({indent:2})
+       // .addIndicators({indent:2})
     //    .addTo(controller);
     //
     //
@@ -152,11 +155,11 @@ $(window).on("load", function () {
         objetivo = $('.Flex__imageContainer--vertical'),
         maxWidth = $('.Flex__imageContainer--vertical img').width();
     console.log(maxWidth);
-    thirdAnimation.insert(TweenMax.fromTo(objetivo, 1, {width: 1}, {width: maxWidth}));
-    //thirdAnimation.insert(TweenMax.from('.imagenmovil',1,{opacity:0}));
+    // thirdAnimation.insert(TweenMax.fromTo(objetivo, 1, {width: 1}, {width: maxWidth}));
+    thirdAnimation.insert(TweenMax.fromTo('.Flex__image--vertical',1,{x:'100%'},{x:'0%'}));
     var scene3 = new ScrollMagic.Scene({triggerElement: "#Nosotros2", duration: duration})
         .setTween(thirdAnimation)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
     var permanentAnimation = new TimelineMax()
     //imagenFinalLeftPosition=imagenInicialLeftPosition*2/2.5;
@@ -165,7 +168,7 @@ $(window).on("load", function () {
         .setPin('.imagenmovil')
         .setTween(permanentAnimation)
 
-         .addIndicators({name: "Permanent",indent:1})
+         // .addIndicators({name: "Permanent",indent:1})
         .addTo(controller);
 
 });
